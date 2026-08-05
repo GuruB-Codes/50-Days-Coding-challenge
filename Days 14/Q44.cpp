@@ -2,23 +2,21 @@
 // Approach: Start with the first term and repeatedly multiply it by the common ratio to print the next terms.
 // Time: O(N), Space: O(1)
 
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
-int main(){
-    double a, r;
-    int n;
-    cout<<"Enter the first term (a): ";
-    cin>>a;
-    cout<<"Enter the common ratio (r): ";
-    cin>>r;
-    cout<<"Enter the number of terms (n): ";
-    cin>>n;
 
-    cout<<"Geometric progression: ";
-    for(int i=0;i<n;i++){
-        cout<<a<<" ";
-        a *= r; 
+int main() {
+    double firstTerm, ratio;
+    int terms;
+
+    cin >> firstTerm >> ratio >> terms;
+
+    double current = firstTerm;
+
+    for (int i = 0; i < terms; i++) {
+        cout << current << " ";
+        current *= ratio;
     }
-    cout<<endl;
+
     return 0;
 }
